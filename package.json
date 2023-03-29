@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
+    "test:unit": "jest --testMatch='**/tests.unit.js'",
+    "test:integration": "jest --testMatch='**/tests/tests.integration.js'",
     "start": "node index.js",
-    "coverage": "jest --coverage --coverageReporters=html"
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

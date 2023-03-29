@@ -5,6 +5,9 @@ const app = express()
 
 app.use(express.json());
 
+app.get('/health-check', () => {
+    res.status(200).send('server is on');
+})
 
 app.post('/media', (req, res) => {
     console.log(req.body);
